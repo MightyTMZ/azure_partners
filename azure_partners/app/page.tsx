@@ -16,9 +16,7 @@ export default function Home() {
             Azure Partners
           </h1>
           <p className="text-xl text-blue-100 max-w-3xl mx-auto mb-12">
-            Spearheading strategic investments in innovative tech and AI
-            startups, driving long-term growth and market leadership through
-            venture capital, AI expertise, and strategic consulting.
+            AI Enablement, Research, and Industry Collaboration.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto mb-12">
             {focusAreas.map((area) => (
