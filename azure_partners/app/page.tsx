@@ -1,17 +1,9 @@
-import {
-  ArrowRight,
-  Brain,
-  Briefcase,
-  Cpu,
-  GraduationCap,
-  LineChart,
-  Rocket,
-  Users,
-} from "lucide-react";
+import { ArrowRight, Brain, LineChart, Users } from "lucide-react";
 import { FocusCard } from "@/components/custom/FocusCard";
 import { InitiativeCard } from "@/components/custom/InitiativeCard";
 import { partners } from "@/data/partners";
 import { focusAreas } from "@/data/focusareas";
+import { events } from "@/data/events";
 import Image from "next/image";
 
 export default function Home() {
@@ -79,24 +71,17 @@ export default function Home() {
       <section className="py-16 bg-blue-900/50 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-center text-white mb-12">
-            Current Initiatives
+            Events
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <InitiativeCard
-              icon={<GraduationCap className="h-6 w-6 text-blue-400" />}
-              title="Columbia University AI Mastery"
-              description="Comprehensive AI education program in partnership with Columbia University."
-            />
-            <InitiativeCard
-              icon={<Rocket className="h-6 w-6 text-blue-400" />}
-              title="Startup Acceleration"
-              description="Supporting YC companies with content strategy and market access."
-            />
-            <InitiativeCard
-              icon={<Cpu className="h-6 w-6 text-blue-400" />}
-              title="Research Programs"
-              description="Student research initiatives in robotics, financial AI, and personal AI applications."
-            />
+            {events.map((event, index) => (
+              <InitiativeCard
+                key={index}
+                icon={event.icon}
+                title={event.title}
+                description={event.description}
+              />
+            ))}
           </div>
         </div>
       </section>
