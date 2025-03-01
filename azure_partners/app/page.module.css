@@ -1,0 +1,8 @@
+.animatedCheck {
+  color: white;
+}
+
+.animatedCheck:hover {
+  color: rgb(68, 255, 68);
+  transition: color 0.3s;
+}

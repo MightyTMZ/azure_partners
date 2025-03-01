@@ -1,10 +1,13 @@
 import { ArrowRight, Brain, LineChart, Users } from "lucide-react";
+import { FaCheckCircle } from "react-icons/fa";
 import { FocusCard } from "@/components/custom/FocusCard";
 import { InitiativeCard } from "@/components/custom/InitiativeCard";
 import { partners } from "@/data/partners";
-import { focusAreas } from "@/data/focusareas";
+// import { focusAreas } from "@/data/focusareas";
+import { historyTimeline } from "@/data/historyTimeline";
 import { events } from "@/data/events";
 import Image from "next/image";
+import styles from "./page.module.css";
 
 export default function Home() {
   return (
@@ -18,7 +21,7 @@ export default function Home() {
           <p className="text-xl text-blue-100 max-w-3xl mx-auto mb-12">
             AI Enablement, Research, and Industry Collaboration.
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto mb-12">
+          {/*<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto mb-12">
             {focusAreas.map((area) => (
               <button
                 key={area.title}
@@ -31,13 +34,68 @@ export default function Home() {
                 <p className="text-sm text-blue-200">{area.description}</p>
               </button>
             ))}
-          </div>
+          </div> */}
           <button className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-blue-900 bg-white hover:bg-blue-50 transition-colors">
             Get started with us
             <ArrowRight className="ml-2 h-5 w-5" />
           </button>
         </div>
       </div>
+      <section className="py-16 bg-blue-950/70 backdrop-blur-sm">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-between mb-12">
+            <div className="md:w-1/2 mb-8 md:mb-0">
+              <h2 className="text-3xl font-bold text-white mb-6">
+                Our Journey
+              </h2>
+              <p className="text-blue-100 text-lg mb-6">
+                Azure Partners was established with a vision to transform how
+                businesses leverage AI technology. From our humble beginnings
+                focused on AI agents and RAG technologies, we've evolved into a
+                comprehensive investment and innovation partner for the most
+                promising tech ventures.
+              </p>
+              <div className="flex items-center">
+                <div
+                  className={
+                    styles.animatedCheck +
+                    "p-3 rounded-full bg-blue-800/70 mr-4"
+                  }
+                  style={{
+                    color: "white",
+                  }}
+                >
+                  <FaCheckCircle />
+                </div>
+                <p className="text-blue-200 italic">
+                  "Building the future of AI, one partnership at a time."
+                </p>
+              </div>
+            </div>
+            <div className="md:w-1/2 pl-0 md:pl-12">
+              <div className="relative">
+                {historyTimeline.map((item, index) => (
+                  <div key={index} className="mb-8 relative pl-8">
+                    <div className="absolute left-0 top-0 h-full w-0.5 bg-blue-500/50"></div>
+                    <div className="absolute left-[-8px] top-0 w-4 h-4 rounded-full bg-blue-400 border-4 border-blue-900"></div>
+                    <div className="bg-blue-800/40 backdrop-blur-sm p-5 rounded-lg border border-blue-700/50">
+                      <div className="flex items-center mb-2">
+                        {/*<span className="text-blue-300 font-bold mr-3">
+                          {item.year}
+                        </span>*/}
+                        <h3 className="text-white font-semibold">
+                          {item.title}
+                        </h3>
+                      </div>
+                      <p className="text-blue-100">{item.description}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Core Focus Areas */}
       <section className="py-16 bg-blue-950/50 backdrop-blur-sm">
