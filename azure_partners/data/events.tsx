@@ -7,7 +7,7 @@ import columbia from "../public/columbia_u_white_logo.png";
 export const events: Event[] = [
 {
     icon: <Image src={columbia} alt={"Columbia University"} height={30} />,
-    title: "Columbia University's AI Entrepreneurship Course",
+    title: "Columbia University's AI Mastery Program",
     description: `
     A weekly cross-disciplinary program aimed at equipping students with practical 
     experience in applied AI innovation. Individuals from computer 
