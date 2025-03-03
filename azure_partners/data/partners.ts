@@ -12,10 +12,6 @@ export const partners = [
       logo: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=200&h=100&q=80",
     },
     {
-      name: "Microsoft",
-      logo: "https://images.unsplash.com/photo-1642132652075-2f0d736c2b6e?auto=format&fit=crop&w=200&h=100&q=80",
-    },
-    {
       name: "Anthropic",
       logo: "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&w=200&h=100&q=80",
     },
