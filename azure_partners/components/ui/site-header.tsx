@@ -26,7 +26,7 @@ export function SiteHeader() {
       <div className="container flex h-16 items-center justify-between">
         <div>
           <Link href="/" className="text-xl font-semibold text-white">
-            <Image src={placeholderLogo} height={50} alt={"Azure Partners"} />
+            Azure Partners
           </Link>
         </div>
 
