@@ -5,6 +5,19 @@ import ollama_logo_white from "../public/ollama_logo_white.png";
 import columbia from "../public/columbia_u_white_logo.png";
 
 export const events: Event[] = [
+{
+    icon: <Image src={columbia} alt={"Columbia University"} height={30} />,
+    title: "Columbia University's AI Entrepreneurship Course",
+    description: `
+    A weekly cross-disciplinary program aimed at equipping students with practical 
+    experience in applied AI innovation. Individuals from computer 
+    science, statistics, and engineering are involved in actual AI
+     development initiatives, participate in LLM assessments, and 
+     investigate AI applications in various sectors. The program 
+     focuses on practical experimentation, research-oriented 
+     problem-solving, and teamwork with industry experts. 
+`,
+  },
   {
     icon: <Image src={ollama_logo_white} alt={"Ollama"} height={30} />,
     title: "Ollama Hackathon",
@@ -20,19 +33,6 @@ export const events: Event[] = [
       on commercialization, scalability, and 
       implementation tactics, 
     promoting practical AI applications. `,
-  },
-  {
-    icon: <Image src={columbia} alt={"Columbia University"} height={30} />,
-    title: "Columbia University's AI Entrepreneurship Course",
-    description: `
-    A weekly cross-disciplinary program aimed at equipping students with practical 
-    experience in applied AI innovation. Individuals from computer 
-    science, statistics, and engineering are involved in actual AI
-     development initiatives, participate in LLM assessments, and 
-     investigate AI applications in various sectors. The program 
-     focuses on practical experimentation, research-oriented 
-     problem-solving, and teamwork with industry experts. 
-`,
   },
   {
     icon: <LineChart className="h-6 w-6" style={{ color: "white" }} />,
