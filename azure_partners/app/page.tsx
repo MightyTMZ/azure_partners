@@ -36,10 +36,13 @@ export default function Home() {
               </button>
             ))}
           </div> */}
-          <button className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-blue-900 bg-white hover:bg-blue-50 transition-colors">
-            Get started with us
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </button>
+
+          <a href="/about#contact">
+            <button className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-blue-900 bg-white hover:bg-blue-50 transition-colors">
+              Get started with us
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </button>
+          </a>
         </div>
       </section>
       <section

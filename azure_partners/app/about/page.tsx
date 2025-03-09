@@ -334,7 +334,10 @@ export default function AboutPage() {
       </div>
 
       {/* Join Us Section */}
-      <div className="relative bg-blue-950/70 backdrop-blur-sm py-20">
+      <div
+        className="relative bg-blue-950/70 backdrop-blur-sm py-20"
+        id="contact"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-start">
           <div className="inline-block bg-blue-900/50 p-3 rounded-lg mb-6">
             <Award className="h-8 w-8 text-blue-400" />

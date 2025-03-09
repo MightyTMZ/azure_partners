@@ -17,22 +17,18 @@ const Footer = () => {
           <h3 className="text-lg font-semibold text-[#0088E0]">Company</h3>
           <ul className="mt-2 space-y-2">
             <li>
-              <a href="#" className="text-gray-300 hover:text-white">
+              <a href="/about" className="text-gray-300 hover:text-white">
                 About
               </a>
             </li>
+
             <li>
-              <a href="#" className="text-gray-300 hover:text-white">
-                Content
-              </a>
-            </li>
-            <li>
-              <a href="#" className="text-gray-300 hover:text-white">
+              <a href="/team" className="text-gray-300 hover:text-white">
                 Team
               </a>
             </li>
             <li>
-              <a href="#" className="text-gray-300 hover:text-white">
+              <a href="mailto:andrew@azurepartners.ai" className="text-gray-300 hover:text-white">
                 Contact
               </a>
             </li>

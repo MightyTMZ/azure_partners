@@ -7,13 +7,13 @@ import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { useState } from "react";
-import Image from "next/image";
-import placeholderLogo from "../../public/AzurePartnersLogo(placeholder).png";
+// import Image from "next/image";
+// import placeholderLogo from "../../public/AzurePartnersLogo(placeholder).png";
 
 const navigation = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
-  { name: "Content", href: "/content" },
+  // { name: "Content", href: "/content" },
   { name: "Team", href: "/team" },
 ];
 
@@ -38,7 +38,7 @@ export function SiteHeader() {
               href={item.href}
               className={cn(
                 "transition-colors hover:text-blue-700",
-                pathname === item.href ? "text-blue-700" : "text-blue-500"
+                // pathname === item.href ? "text-blue-700" : "text-blue-500"
               )}
             >
               {item.name}
