@@ -47,24 +47,24 @@ const values = [
 
 const achievements = [
   {
-    number: "50+",
+    number: "10+",
     label: "Portfolio Companies",
     description: "Successful investments in innovative startups",
   },
-  {
+  /*{
     number: "$500M",
     label: "Assets Under Management",
     description: "Trust from our investors",
-  },
+  },*/
   {
-    number: "30+",
+    number: "15+",
     label: "Industry Partners",
     description: "Strong network of collaboration",
   },
   {
-    number: "95%",
-    label: "Success Rate",
-    description: "Portfolio company growth",
+    number: "500+",
+    label: "Students trained",
+    description: "Strong educational program",
   },
 ];
 

@@ -1,57 +1,49 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
-import { Linkedin, Mail } from 'lucide-react';
+import Image from "next/image";
+import { Linkedin, Mail } from "lucide-react";
+import Andrew from "../../public/team/andrew.jpg";
+import Tom from "../../public/team/tom.jpg";
+import Jessie from "../../public/team/Jessie.jpg";
+import Ani from "../../public/team/Ani.jpg";
 
 const team = [
   {
-    name: 'Sarah Chen',
-    role: 'CEO & Founding Partner',
-    image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=300&h=300&q=80',
-    bio: 'Former VP of AI at Microsoft, Sarah brings over 15 years of experience in technology leadership and venture capital. She has led investments in over 30 successful AI startups.',
-    linkedin: '#',
-    email: 'sarah@azurepartners.ai'
+    name: "Andrew Zhang",
+    role: "CEO & Founding Partner",
+    image: Andrew,
+    bio: `
+    Andrew Zhang is a partner at Epsilla, a YC ’23 AI startup, where he leads the Go-to-Market strategy. He has previously worked at Amazon, IBM, and various Silicon Valley startups. Andrew specializes in product-market fit consulting for AI startups and has taught data science and machine learning at Rutgers Business School. He co-authored Hyperledger Cookbook and is currently writing A Practical Guide to Ollama: Running LLMs and SLMs Locally for Packt Publishing.
+    
+    In his early career, Andrew served as a tech lead overseeing one of the largest internet platforms. More recently, he has been spearheading an innovative AI program at Columbia University.
+
+    `,
+    linkedin: "https://www.linkedin.com/in/andrew-zhang-617467/",
+    email: "andrew@azurepartners.ai",
   },
   {
-    name: 'David Rodriguez',
-    role: 'Managing Partner',
-    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=300&h=300&q=80',
-    bio: 'With a background in quantum computing and AI research at IBM, David focuses on identifying breakthrough technologies and supporting early-stage startups.',
-    linkedin: '#',
-    email: 'david@azurepartners.ai'
+    name: "Tom Zhang",
+    role: "Founding Engineer",
+    image: Tom,
+    bio: `
+    AI entrepreneur and founding engineer of OrbitView, pioneering an AI-powered mentorship hub. Expertise in generative AI, prompt engineering, and open-source AI solutions.
+
+    `,
+    linkedin: "https://www.linkedin.com/in/tom-zhang-485341274/",
+    email: "tom.zhang.career@hotmail.com",
   },
   {
-    name: 'Emily Zhang',
-    role: 'Partner, AI Strategy',
-    image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=300&h=300&q=80',
-    bio: 'PhD in Machine Learning from Stanford, Emily leads our AI strategy consulting practice and has helped scale multiple unicorn startups in the AI space.',
-    linkedin: '#',
-    email: 'emily@azurepartners.ai'
+    name: "Jessie Gao",
+    role: "COO",
+    image: Jessie,
+    bio: `
+   Marketing and business strategist with expertise in AI-driven content, sales strategy, and product management. Previously led CRM campaigns at Shopee Singapore and business operations at JD.com. Experience in AI applications across legal, healthcare, and research sectors. Alumna of National University of Singapore and Columbia University.
+    `,
+    linkedin: "https://www.linkedin.com/in/jessie-gao-hongjie/",
+    email: "hg2682@columbia.edu",
+    
   },
-  {
-    name: 'Marcus Thompson',
-    role: 'Partner, Investments',
-    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&h=300&q=80',
-    bio: 'Former founder and angel investor, Marcus has a proven track record of identifying promising AI startups. He leads our early-stage investment strategy.',
-    linkedin: '#',
-    email: 'marcus@azurepartners.ai'
-  },
-  {
-    name: 'Aisha Patel',
-    role: 'Head of Operations',
-    image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&h=300&q=80',
-    bio: 'With extensive experience in operations at top VC firms, Aisha ensures smooth execution of our investment strategy and portfolio company support.',
-    linkedin: '#',
-    email: 'aisha@azurepartners.ai'
-  },
-  {
-    name: 'James Wilson',
-    role: 'Technical Partner',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&h=300&q=80',
-    bio: 'Previously CTO at multiple successful startups, James provides technical due diligence and hands-on support to our portfolio companies.',
-    linkedin: '#',
-    email: 'james@azurepartners.ai'
-  }
+  
 ];
 
 export default function TeamPage() {
@@ -61,10 +53,12 @@ export default function TeamPage() {
         <div className="text-center mb-16">
           <h1 className="text-4xl font-bold text-white mb-4">Our Team</h1>
           <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-            Meet the experts and visionaries behind Azure Partners, bringing together decades of experience in AI, venture capital, and technology innovation.
+            Meet the experts and visionaries behind Azure Partners, bringing
+            together decades of experience in AI, venture capital, and
+            technology innovation.
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {team.map((member) => (
             <div
@@ -82,14 +76,16 @@ export default function TeamPage() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-blue-900/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
-              
+
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-white mb-1">{member.name}</h3>
+                <h3 className="text-xl font-semibold text-white mb-1">
+                  {member.name}
+                </h3>
                 <p className="text-blue-200 font-medium mb-3">{member.role}</p>
                 <p className="text-blue-100 mb-4 line-clamp-3 group-hover:line-clamp-none transition-all">
                   {member.bio}
                 </p>
-                
+
                 <div className="flex space-x-4">
                   <a
                     href={member.linkedin}
