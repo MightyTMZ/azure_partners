@@ -3,7 +3,7 @@
 import { Calendar, MapPin, Users, ExternalLink } from "lucide-react";
 import Image from "next/image";
 
-const pastEvents = [
+/* const pastEvents = [
   {
     id: 1,
     title: "AI Innovation Summit 2024",
@@ -70,7 +70,7 @@ const pastEvents = [
       "https://images.unsplash.com/photo-1553729459-efe14ef6055d?auto=format&fit=crop&w=400&q=80",
     ],
   },
-];
+];*/
 
 export default function EventsPage() {
   return (
@@ -99,12 +99,12 @@ export default function EventsPage() {
       {/* Events List */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="space-y-16">
+          {/*
           {pastEvents.map((event) => (
             <div
               key={event.id}
               className="bg-blue-800/50 backdrop-blur-sm rounded-xl overflow-hidden border border-blue-700/50"
             >
-              {/* Main Event Image */}
               <div className="relative h-[400px]">
                 <Image
                   src={event.image}
@@ -119,7 +119,6 @@ export default function EventsPage() {
                   {event.title}
                 </h2>
 
-                {/* Event Details */}
                 <div className="flex flex-wrap gap-6 mb-6">
                   <div className="flex items-center text-blue-200">
                     <Calendar className="h-5 w-5 mr-2" />
@@ -137,7 +136,6 @@ export default function EventsPage() {
 
                 <p className="text-blue-100 mb-8">{event.description}</p>
 
-                {/* Event Highlights */}
                 <div className="mb-8">
                   <h3 className="text-xl font-semibold text-white mb-4">
                     Event Highlights
@@ -155,7 +153,6 @@ export default function EventsPage() {
                   </ul>
                 </div>
 
-                {/* Event Gallery */}
                 <div>
                   <h3 className="text-xl font-semibold text-white mb-4">
                     Event Gallery
@@ -179,6 +176,11 @@ export default function EventsPage() {
               </div>
             </div>
           ))}
+          
+          
+          
+          */}
+          <h1 className="text-white">Coming soon! We are currently gathering it for you!</h1>
         </div>
       </div>
     </div>

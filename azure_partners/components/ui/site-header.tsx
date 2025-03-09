@@ -25,7 +25,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 w-full border-b border-blue-800/20 bg-blue-900/95 backdrop-blur supports-[backdrop-filter]:bg-blue-500/60">
       <div className="container flex h-16 items-center justify-between">
         <div>
-          <Link href="/" className="text-xl font-semibold text-white">
+          <Link href="/" className="ml-4 text-xl font-semibold text-white">
             Azure Partners
           </Link>
         </div>

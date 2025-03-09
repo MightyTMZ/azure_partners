@@ -8,8 +8,7 @@ const Footer = () => {
         <div>
           <h2 className="text-2xl font-bold text-[#0088E0]">Azure Partners</h2>
           <p className="text-sm text-gray-400 mt-2">
-            AI-focused firm advancing enterprise AI, finance, and robotics
-            solutions.
+            AI Enablement, Research, and Industry Collaboration.
           </p>
         </div>
 
@@ -28,7 +27,10 @@ const Footer = () => {
               </a>
             </li>
             <li>
-              <a href="mailto:andrew@azurepartners.ai" className="text-gray-300 hover:text-white">
+              <a
+                href="mailto:andrew@azurepartners.ai"
+                className="text-gray-300 hover:text-white"
+              >
                 Contact
               </a>
             </li>
