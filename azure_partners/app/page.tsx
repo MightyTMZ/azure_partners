@@ -11,9 +11,11 @@ import styles from "./page.module.css";
 
 export default function Home() {
   return (
-    <main className="flex-1 bg-gradient-to-b from-blue-900 via-blue-800 to-blue-900">
+    <main className="flex-1 bg-gradient-to-b">
       {/* Hero Section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
+      <section
+        className={`${styles.hero}`}
+      >
         <div className="text-center">
           <h1 className="text-5xl font-bold animate-title inline-block mb-6">
             Azure Partners
@@ -40,7 +42,7 @@ export default function Home() {
             <ArrowRight className="ml-2 h-5 w-5" />
           </button>
         </div>
-      </div>
+      </section>
       <section className="py-16 bg-blue-950/70 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center justify-between mb-12">
