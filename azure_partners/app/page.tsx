@@ -173,7 +173,7 @@ export default function Home() {
                     src={partner.logo}
                     alt={partner.name}
                     fill
-                    className="object-contain filter grayscale opacity-75 transition-all duration-300 group-hover:grayscale-0 group-hover:opacity-100"
+                    className="object-contain filter opacity-75 transition-all duration-300 group-hover:grayscale-0 group-hover:opacity-100"
                   />
                 </div>
                 <p className="mt-2 text-sm text-center text-blue-800 font-medium opacity-75 group-hover:opacity-100 transition-opacity">
@@ -181,6 +181,8 @@ export default function Home() {
                 </p>
               </div>
             ))}
+
+            <p>and many more...</p>
           </div>
         </div>
       </section>
