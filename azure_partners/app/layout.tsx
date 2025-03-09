@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import { SiteHeader } from "@/components/ui/site-header";
 import Footer from "@/components/Footer";
+import { Analytics } from "@vercel/analytics/react";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -26,6 +27,7 @@ export default function RootLayout({
       <body
         className={`${poppins.variable} font-poppins min-h-screen flex flex-col`}
       >
+        <Analytics />
         <SiteHeader />
         {children}
         <Footer />

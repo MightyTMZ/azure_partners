@@ -1,11 +1,18 @@
-"use client";
-
 import Image from "next/image";
 import { Linkedin, Mail } from "lucide-react";
 import Andrew from "../../public/team/andrew.jpg";
 import Tom from "../../public/team/tom.jpg";
 import Jessie from "../../public/team/Jessie.jpg";
-import Ani from "../../public/team/Ani.jpg";
+// import Ani from "../../public/team/Ani.jpg";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Team - Azure Partners",
+  // description:
+  //  "Azure Partners spearheads strategic investments in innovative tech and AI startups, driving long-term growth and market leadership.",
+};
+
+
 
 const team = [
   {

@@ -1,7 +1,6 @@
-"use client";
-
-import { Calendar, MapPin, Users, ExternalLink } from "lucide-react";
+// import { Calendar, MapPin, Users, ExternalLink } from "lucide-react";
 import Image from "next/image";
+import { Metadata } from "next";
 
 /* const pastEvents = [
   {
@@ -71,6 +70,12 @@ import Image from "next/image";
     ],
   },
 ];*/
+
+export const metadata: Metadata = {
+  title: "Past Events - Azure Partners",
+  // description:
+  //  "Azure Partners spearheads strategic investments in innovative tech and AI startups, driving long-term growth and market leadership.",
+};
 
 export default function EventsPage() {
   return (
@@ -180,7 +185,9 @@ export default function EventsPage() {
           
           
           */}
-          <h1 className="text-white">Coming soon! We are currently gathering it for you!</h1>
+          <h1 className="text-white">
+            Coming soon! We are currently gathering it for you!
+          </h1>
         </div>
       </div>
     </div>

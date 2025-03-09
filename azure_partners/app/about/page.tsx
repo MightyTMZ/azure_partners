@@ -1,5 +1,3 @@
-"use client";
-
 import {
   Brain,
   Target,
@@ -12,11 +10,16 @@ import {
   GraduationCap,
   Briefcase,
   LineChart,
-  ChevronDown,
-  ChevronUp,
 } from "lucide-react";
 // import Image from "next/image";
-import { useState } from "react";
+import ServiceCard from "./service-card";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About - Azure Partners",
+  // description:
+  //  "Azure Partners spearheads strategic investments in innovative tech and AI startups, driving long-term growth and market leadership.",
+};
 
 const values = [
   {
@@ -127,43 +130,6 @@ const services = [
       "Our acceleration program provides comprehensive support for early-stage startups, including funding, mentorship, and access to our extensive network of industry leaders. We focus on helping startups scale effectively and achieve sustainable growth.",
   },
 ];
-
-function ServiceCard({ service }: { service: (typeof services)[0] }) {
-  const [isExpanded, setIsExpanded] = useState(false);
-
-  return (
-    <div className="bg-blue-800/50 backdrop-blur-sm p-8 rounded-xl border border-blue-700/50">
-      <div className="mb-6">{service.icon}</div>
-      <h3 className="text-xl font-semibold text-white mb-4">{service.title}</h3>
-      <p className="text-blue-100 mb-4">{service.description}</p>
-
-      <div
-        className={`overflow-hidden transition-all duration-300 ${
-          isExpanded ? "max-h-[1000px]" : "max-h-0"
-        }`}
-      >
-        <p className="text-blue-200 whitespace-pre-line">{service.details}</p>
-      </div>
-
-      <button
-        onClick={() => setIsExpanded(!isExpanded)}
-        className="flex items-center text-blue-300 hover:text-blue-100 transition-colors mt-4"
-      >
-        {isExpanded ? (
-          <>
-            Show Less
-            <ChevronUp className="ml-2 h-4 w-4" />
-          </>
-        ) : (
-          <>
-            Learn More
-            <ChevronDown className="ml-2 h-4 w-4" />
-          </>
-        )}
-      </button>
-    </div>
-  );
-}
 
 export default function AboutPage() {
   return (
