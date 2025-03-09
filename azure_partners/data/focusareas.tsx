@@ -4,21 +4,33 @@ export const focusAreas = [
   {
     title: "Venture Capital",
     icon: <LineChart className="h-6 w-6" />,
-    description: "Invest in the future of technology",
+    description:
+      "Spearhead strategic investments in innovative tech and AI startups, driving long-term growth and market leadership.",
   },
   {
     title: "Consulting",
     icon: <Briefcase className="h-6 w-6" />,
-    description: "Strategic guidance for growth",
+    description:
+      "Deliver tailored advisory on go-to-market strategies, scaling operations, and achieving global market success.",
   },
   {
     title: "Training",
     icon: <GraduationCap className="h-6 w-6" />,
-    description: "Expert-led AI education",
+    description: `
+    AI training through strategic partnerships with VCs,
+     accelerators, and industry leaders, equipping 
+     professionals with hands-on AI experience, 
+     LLM assessments, and real-world applications.
+
+    `,
   },
   {
     title: "Startup Acceleration",
     icon: <Rocket className="h-6 w-6" />,
-    description: "Fast-track your success",
+    description: `
+    Supporting early-stage AI startups through mentorship, consulting, 
+    and industry connections. 
+
+    `,
   },
 ];

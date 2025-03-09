@@ -5,6 +5,7 @@ import { InitiativeCard } from "@/components/custom/InitiativeCard";
 import { partners } from "@/data/partners";
 // import { focusAreas } from "@/data/focusareas";
 import { historyTimeline } from "@/data/historyTimeline";
+import { focusAreas } from "@/data/focusareas";
 import { events } from "@/data/events";
 import Image from "next/image";
 import styles from "./page.module.css";
@@ -13,9 +14,7 @@ export default function Home() {
   return (
     <main className="flex-1 bg-gradient-to-b">
       {/* Hero Section */}
-      <section
-        className={`${styles.hero}`}
-      >
+      <section className={`${styles.hero}`}>
         <div className="text-center">
           <h1 className="text-5xl font-bold animate-title inline-block mb-6">
             Azure Partners
@@ -43,13 +42,23 @@ export default function Home() {
           </button>
         </div>
       </section>
-      <section className="py-16 bg-blue-950/70 backdrop-blur-sm">
+      <section
+        className={`${styles.journey} ${styles[""]} py-16 bg-blue-950/70 backdrop-blur-sm`}
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center justify-between mb-12">
             <div className="md:w-1/2 mb-8 md:mb-0">
-              <h2 className="text-3xl font-bold text-white mb-6">
+              <h2 className="text-3xl font-bold text-white mb-4">
                 Our Journey
               </h2>
+              <div
+                style={{
+                  background: "white",
+                  height: "2px",
+                  margin: "5px 0 10px 0",
+                  maxWidth: "200px",
+                }}
+              ></div>
               <p className="text-blue-100 text-lg mb-6">
                 Azure Partners was established with a vision to transform how
                 businesses leverage AI technology. From our humble beginnings
@@ -100,36 +109,33 @@ export default function Home() {
       </section>
 
       {/* Core Focus Areas */}
-      <section className="py-16 bg-blue-950/50 backdrop-blur-sm">
+      <section
+        className={`${styles["focus-areas"]} py-16 bg-blue-950/50 backdrop-blur-sm`}
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center text-white mb-12">
+          <h2 className="text-3xl font-bold text-center text-blue-900 mb-12">
             Our Core Focus Areas
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <FocusCard
-              icon={<LineChart className="h-8 w-8 text-blue-400" />}
-              title="Venture Capital"
-              description="Strategic investments in cutting-edge technology and AI startups, providing capital and expertise for sustainable growth."
-            />
-            <FocusCard
-              icon={<Brain className="h-8 w-8 text-blue-400" />}
-              title="AI Innovation"
-              description="Developing and implementing advanced AI solutions, from research to production-ready applications."
-            />
-            <FocusCard
-              icon={<Users className="h-8 w-8 text-blue-400" />}
-              title="Strategic Consulting"
-              description="Expert guidance in AI strategy, go-to-market planning, and technology implementation."
-            />
+            {focusAreas.map((area, index) => (
+              <FocusCard
+                key={index}
+                icon={area.icon}
+                title={area.title}
+                description={area.description}
+              />
+            ))}
           </div>
         </div>
       </section>
 
       {/* Initiatives Section */}
-      <section className="py-16 bg-blue-900/50 backdrop-blur-sm">
+      <section
+        className={`${styles.events} py-16 bg-blue-900/50 backdrop-blur-sm`}
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center text-white mb-12">
-            Events
+          <h2 className="text-3xl font-bold text-center text-blue-900 mb-12">
+            Key Events
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {events.map((event, index) => (
@@ -141,6 +147,12 @@ export default function Home() {
               />
             ))}
           </div>
+          <div style={{ height: "20px" }}>
+            {/* an temporary div to have a margin */}
+          </div>
+          <a href="/past-events" className={`${styles.pastEventsLink} mt-4`}>
+            View past events &#8594;
+          </a>
         </div>
       </section>
 
@@ -151,8 +163,8 @@ export default function Home() {
             Our Partners
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 items-center">
-            {partners.map((partner) => (
-              <div key={partner.name} className="relative group">
+            {partners.map((partner, index) => (
+              <div key={index} className="relative group">
                 <div className="aspect-[2/1] relative overflow-hidden rounded-lg bg-white shadow-md p-4 transition-all duration-300 group-hover:shadow-xl">
                   <Image
                     src={partner.logo}

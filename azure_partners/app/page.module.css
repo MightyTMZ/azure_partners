@@ -1,17 +1,68 @@
 .hero {
-  height: 100vh;
+  height: 80vh;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(-45deg, #004C99, #005FAD, #0073C6, #0088E0);
+  background: radial-gradient(#004c99, #05365e, #0073c6, #000000);
   background-size: 400% 400%;
   animation: gradientAnimation 8s ease infinite;
 }
 
 @keyframes gradientAnimation {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.journey {
+  position: relative;
+  border-top: 4px solid rgb(148, 148, 252);
+  border-bottom: 4px solid rgb(148, 148, 252);
+  background: #000; /* Keeps the black background */
+}
+
+.journey::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  border-radius: inherit;
+  background: radial-gradient(
+    circle,
+    rgba(0, 127, 255, 0.6) 0%,
+    rgba(0, 127, 255, 0) 80%
+  );
+  z-index: -1;
+  filter: blur(15px);
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+    height: 100vh;
+  }
+}
+
+.focus-areas {
+  background: radial-gradient(circle, #007fff99 40%, rgba(0, 127, 255, 0));
+}
+
+.events {
+  border-top: 3px solid white;
+  background: radial-gradient(circle, #007fff99 40%, rgba(0, 127, 255, 0));
+}
+
+.pastEventsLink:hover {
+  color: rgb(98, 88, 30);
+  animation: color 0.5s;
 }
 
 .animatedCheck {
