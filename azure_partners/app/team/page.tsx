@@ -2,7 +2,7 @@ import Image from "next/image";
 import { Linkedin, Mail } from "lucide-react";
 import Andrew from "../../public/team/andrew.jpg";
 import Tom from "../../public/team/tom.jpg";
-import Jessie from "../../public/team/Jessie.jpg";
+import Jessie from "../../public/team/jessie.jpg";
 // import Ani from "../../public/team/Ani.jpg";
 import { Metadata } from "next";
 
