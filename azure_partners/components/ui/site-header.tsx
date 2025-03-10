@@ -60,7 +60,7 @@ export function SiteHeader() {
           </SheetTrigger>
           <SheetContent
             side="right"
-            className="w-[240px] sm:w-[300px] bg-blue-900 border-blue-800"
+            className="w-[240px] sm:w-[300px] text-white bg-blue-900 border-blue-800"
           >
             <nav className="flex flex-col space-y-4 mt-6">
               {navigation.map((item) => (
@@ -69,8 +69,8 @@ export function SiteHeader() {
                   href={item.href}
                   onClick={() => setIsOpen(false)}
                   className={cn(
-                    "text-lg transition-colors hover:text-blue-500",
-                    pathname === item.href ? "text-blue-700" : "text-blue-500"
+                    "text-lg text-white hover:text-blue-500",
+                    // pathname === item.href ? "text-blue-700" : "text-blue-500"
                   )}
                 >
                   {item.name}
