@@ -20,9 +20,8 @@ const team = [
     role: "CEO & Founding Partner",
     image: Andrew,
     bio: `
-    Andrew Zhang is a partner at Epsilla, a YC ’23 AI startup, where he leads the Go-to-Market strategy. He has previously worked at Amazon, IBM, and various Silicon Valley startups. Andrew specializes in product-market fit consulting for AI startups and has taught data science and machine learning at Rutgers Business School. He co-authored Hyperledger Cookbook and is currently writing A Practical Guide to Ollama: Running LLMs and SLMs Locally for Packt Publishing.
-    
-    In his early career, Andrew served as a tech lead overseeing one of the largest internet platforms. More recently, he has been spearheading an innovative AI program at Columbia University.
+    Andrew Zhang is the CEO and founding partner of Azure Partners, specializing in Go-to-Market (GTM) strategy for AI startups. He is a GTM expert with deep expertise in AI and machine learning, advising companies on scaling Generative AI solutions. Andrew is also a partner at Epsilla, a Y Combinator ’23 startup focused on Retrieval-Augmented Generation (RAG) and AI agents.
+Previously, he led AI initiatives at Amazon, IBM, and Silicon Valley startups, with a track record in product-market fit consulting. He has taught data science and machine learning at Rutgers Business School and is currently spearheading an AI Mastery program at Columbia University. A recognized AI speaker and author, Andrew co-authored Hyperledger Cookbook and is currently writing A Practical Guide to Ollama: Running LLMs and SLMs Locally (expected Q2 2025).
 
     `,
     linkedin: "https://www.linkedin.com/in/andrew-zhang-617467/",
@@ -33,7 +32,7 @@ const team = [
     role: "Founding Engineer",
     image: Tom,
     bio: `
-    AI entrepreneur and founding engineer of OrbitView, pioneering an AI-powered mentorship hub. Expertise in generative AI, prompt engineering, and open-source AI solutions.
+    Tom Zhang is the founding engineer of OrbitView, pioneering an AI-powered mentorship hub. Expertise in generative AI, prompt engineering, and open-source AI solutions.
 
     `,
     linkedin: "https://www.linkedin.com/in/tom-zhang-485341274/",
