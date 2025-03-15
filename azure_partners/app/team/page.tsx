@@ -3,16 +3,17 @@ import { Linkedin, Mail } from "lucide-react";
 import Andrew from "../../public/team/andrew.jpg";
 import Tom from "../../public/team/tom.jpg";
 import Jessie from "../../public/team/jessie.jpg";
+import Ani from "../../public/team/ani.png";
 // import Ani from "../../public/team/Ani.jpg";
 import { Metadata } from "next";
+import Link from "next/link";
+import { FaGlobe } from "react-icons/fa";
 
 export const metadata: Metadata = {
   title: "Team - Azure Partners",
   // description:
   //  "Azure Partners spearheads strategic investments in innovative tech and AI startups, driving long-term growth and market leadership.",
 };
-
-
 
 const team = [
   {
@@ -36,6 +37,7 @@ Previously, he led AI initiatives at Amazon, IBM, and Silicon Valley startups, w
 
     `,
     linkedin: "https://www.linkedin.com/in/tom-zhang-485341274/",
+    website: "https://www.tomzhang.info/",
     email: "tom.zhang.career@hotmail.com",
   },
   {
@@ -47,9 +49,28 @@ Previously, he led AI initiatives at Amazon, IBM, and Silicon Valley startups, w
     `,
     linkedin: "https://www.linkedin.com/in/jessie-gao-hongjie/",
     email: "hg2682@columbia.edu",
-    
   },
-  
+  {
+    name: "Aniruddha Mukherjee",
+    role: "-",
+    image: Ani,
+    bio: `Aniruddha Mukherjee is currently a junior majoring in Computer Science at 
+    Kalinga Institute of Industrial Technology (KIIT), where he ranks at the top of his class. 
+    He is also pursuing a BS in Data Science with the Indian Institute of Technology, Madras (IIT-M) 
+    in an online format. He has interned at various research institutions like BITS Pilani, Tata Consultancy 
+    Services Research and The University of Texas at Austin. He is passionate about solving problems and has explored
+     solutions in quantitative finance, healthcare, anomaly-detection and image quality assessment leading to presentations 
+     and publications at venues like IEEE Transactions, ACM's International Conference on AI in Finance (ICAIF'24) and Springer’s
+      Cognitive Computation. Aniruddha’s drive to build and create impactful solutions has led him to win three hackathons
+       hosted by Indian Institutes of Technology (IITs) and co-author two filed patents on real-world solutions using AI.
+        He also has been working closely with SkinAI, a New Delhi based startup, and with IIT-Kharagpur as a collaborator
+         with the Department of Artificial Intelligence. Outside of academics, he is a Grade 8 pianist (ABRSM), enjoys 
+         playing football, tennis and chess, and enjoys debating. Aniruddha has volunteered for Stanford as an Instructor 
+         (CS106A) to teach CS basics. He is enthusiastic about utilizing technology and engineering to make a significant and
+          meaningful impact in the lives of individuals. Looking ahead, he is interested in pursuing a Master’s in Computer Science (MSCS) followed by a PhD.`,
+    linkedin: "https://www.linkedin.com/in/jessie-gao-hongjie/",
+    email: "mukh.aniruddha@gmail.com",
+  },
 ];
 
 export default function TeamPage() {
@@ -93,20 +114,31 @@ export default function TeamPage() {
                 </p>
 
                 <div className="flex space-x-4">
-                  <a
+                  <Link
                     href={member.linkedin}
                     className="p-2 rounded-full bg-blue-700/50 hover:bg-blue-600/50 transition-colors"
                     aria-label={`${member.name}'s LinkedIn`}
                   >
                     <Linkedin className="h-5 w-5 text-blue-100" />
-                  </a>
-                  <a
+                  </Link>
+                  <Link
                     href={`mailto:${member.email}`}
                     className="p-2 rounded-full bg-blue-700/50 hover:bg-blue-600/50 transition-colors"
                     aria-label={`Email ${member.name}`}
                   >
                     <Mail className="h-5 w-5 text-blue-100" />
-                  </a>
+                  </Link>
+                  {member.website ? (
+                    <Link
+                      href={`${member.website}`}
+                      className="p-2 rounded-full bg-blue-700/50 hover:bg-blue-600/50 transition-colors"
+                      aria-label={`Website ${member.name}`}
+                    >
+                      <FaGlobe className="h-5 w-5 text-blue-100" />
+                    </Link>
+                  ) : (
+                    <></>
+                  )}
                 </div>
               </div>
             </div>
